@@ -1,5 +1,5 @@
 // ===== Hover fade effect =====
-const hoverTargets = document.querySelectorAll('.writing-list li, .exp-list li');
+const hoverTargets = document.querySelectorAll('.writing-list li, .exp-list li, .proj-list li');
 
 hoverTargets.forEach(item => {
   item.addEventListener('mouseenter', () => {
@@ -10,17 +10,16 @@ hoverTargets.forEach(item => {
   });
 });
 
-// ===== Footer: live time in Jakarta + animated bunny =====
-const bunnyFrames = [
-  '(\\ (\\',
-  '( >.>)',
-  'c(">)',
-  '(\\ (\\',
-  '( =.=)',
-  'c(">)',
+// ===== Footer: live Jakarta time + Garchomp =====
+// Garchomp flying animation - shark dragon swooping
+const garchompFrames = [
+  '∧(>w<)∧',
+  '/(>w<)/',
+  '∨(>w<)∨',
+  '\\(>w<)\\',
 ];
 
-let bunnyFrame = 0;
+let frame = 0;
 
 function updateFooter() {
   const now = new Date();
@@ -31,14 +30,14 @@ function updateFooter() {
     hour12: true
   }).toLowerCase();
 
-  const bunny = bunnyFrames[bunnyFrame % bunnyFrames.length];
-  bunnyFrame++;
+  const chomp = garchompFrames[frame % garchompFrames.length];
+  frame++;
 
   const el = document.getElementById('footer-time');
   if (el) {
-    el.innerHTML = `${timeStr} in Jakarta, Indonesia <span class="footer-bunny">${bunny}</span>`;
+    el.innerHTML = `${timeStr} in Jakarta <span class="footer-garchomp" title="Garchomp">${chomp}</span>`;
   }
 }
 
 updateFooter();
-setInterval(updateFooter, 600);
+setInterval(updateFooter, 500);

@@ -118,15 +118,38 @@ a:hover {
   font-weight: 500;
 }
 
-.proj-desc {
-  font-size: 0.9rem;
-  color: var(--color-text-secondary);
-  display: block;
+/* ===== Projects ===== */
+.projects {
+  padding: 32px 0;
+  border-top: 1px solid var(--color-border);
 }
 
-.projects .writing-list li {
+.projects h2 {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  margin-bottom: 20px;
+}
+
+.proj-list {
+  list-style: none;
+}
+
+.proj-list li {
+  display: flex;
   flex-direction: column;
   gap: 2px;
+  padding: 8px 0;
+}
+
+.proj-list a {
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.proj-desc {
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
 }
 
 /* ===== Experience ===== */
@@ -172,17 +195,19 @@ a:hover {
 /* ===== Hover fade effect ===== */
 .writing-list li,
 .exp-list li,
-.projects .writing-list li {
+.proj-list li {
   transition: opacity 0.2s ease;
 }
 
 body.hovered .writing-list li,
-body.hovered .exp-list li {
+body.hovered .exp-list li,
+body.hovered .proj-list li {
   opacity: 0.3;
 }
 
 body.hovered .writing-list li:hover,
-body.hovered .exp-list li:hover {
+body.hovered .exp-list li:hover,
+body.hovered .proj-list li:hover {
   opacity: 1;
 }
 
@@ -197,7 +222,7 @@ body.hovered .exp-list li:hover {
   color: var(--color-text-secondary);
 }
 
-.footer-bunny {
+.footer-garchomp {
   display: inline-block;
   font-family: monospace;
   letter-spacing: -1px;
