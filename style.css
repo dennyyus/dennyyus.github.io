@@ -116,6 +116,12 @@ a:hover {
 .proj-desc {
   font-size: 0.9rem;
   color: var(--color-text-secondary);
+  display: block;
+}
+
+.projects .writing-list li {
+  flex-direction: column;
+  gap: 2px;
 }
 
 /* ===== Experience ===== */
