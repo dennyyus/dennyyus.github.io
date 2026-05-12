@@ -125,7 +125,7 @@ a:hover {
 
 .exp-list li {
   display: flex;
-  align-items: baseline;
+  align-items: flex-start;
   gap: 16px;
   padding: 8px 0;
   font-size: 0.95rem;
