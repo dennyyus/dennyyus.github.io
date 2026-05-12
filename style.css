@@ -25,12 +25,11 @@ body {
 }
 
 .container {
-  max-width: 600px;
+  max-width: 580px;
   margin: 0 auto;
   padding: 0 24px;
   width: 100%;
   overflow-wrap: break-word;
-  word-wrap: break-word;
 }
 
 a {
@@ -51,9 +50,10 @@ a:hover {
 }
 
 .header h1 {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: 600;
   line-height: 1.4;
+  letter-spacing: -0.3px;
 }
 
 .updated {
@@ -115,7 +115,7 @@ a:hover {
 }
 
 .writing-list a {
-  font-weight: 500;
+  font-weight: 400;
 }
 
 /* ===== Experience ===== */
@@ -160,7 +160,7 @@ a:hover {
 
 .proj-list a {
   font-size: 0.95rem;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .proj-desc {
