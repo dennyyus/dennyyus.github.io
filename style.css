@@ -34,6 +34,7 @@ body {
 
 a {
   color: var(--color-link);
+  font-weight: 600;
   text-decoration: underline;
   text-underline-offset: 3px;
   text-decoration-color: var(--color-border);
