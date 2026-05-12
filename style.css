@@ -198,6 +198,12 @@ a:hover {
   color: var(--color-text-secondary);
 }
 
+.footer-inspired {
+  margin-top: 6px;
+  font-size: 0.8rem;
+  color: #bbb;
+}
+
 .footer-garchomp {
   display: inline-block;
   font-family: monospace;
