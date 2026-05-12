@@ -22,6 +22,11 @@ body {
   line-height: 1.7;
   background: #fff;
   -webkit-font-smoothing: antialiased;
+  transition: background 0.3s ease;
+}
+
+body.hovered {
+  background: #f5f0e8;
 }
 
 .container {
@@ -164,6 +169,23 @@ a:hover {
   font-weight: 600;
 }
 
+/* ===== Hover fade effect ===== */
+.writing-list li,
+.exp-list li,
+.projects .writing-list li {
+  transition: opacity 0.2s ease;
+}
+
+body.hovered .writing-list li,
+body.hovered .exp-list li {
+  opacity: 0.3;
+}
+
+body.hovered .writing-list li:hover,
+body.hovered .exp-list li:hover {
+  opacity: 1;
+}
+
 /* ===== Footer ===== */
 .footer {
   padding: 48px 0 80px;
@@ -173,6 +195,14 @@ a:hover {
 .footer p {
   font-size: 0.85rem;
   color: var(--color-text-secondary);
+}
+
+.footer-bunny {
+  display: inline-block;
+  font-family: monospace;
+  letter-spacing: -1px;
+  margin-left: 6px;
+  vertical-align: middle;
 }
 
 /* ===== Mobile ===== */
