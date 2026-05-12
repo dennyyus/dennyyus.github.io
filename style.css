@@ -113,6 +113,11 @@ a:hover {
   font-weight: 500;
 }
 
+.proj-desc {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+}
+
 /* ===== Experience ===== */
 .experience {
   padding: 32px 0;
