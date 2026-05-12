@@ -173,6 +173,12 @@ a:hover {
   color: var(--color-text-secondary);
 }
 
+.proj-desc a {
+  font-size: inherit;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
 /* ===== Hover fade ===== */
 .writing-list li,
 .exp-list li,
