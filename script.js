@@ -1,42 +1,16 @@
-// ===== Hover fade effect =====
-const hoverTargets = document.querySelectorAll('.writing-list li, .exp-list li, .proj-list li');
-
-hoverTargets.forEach(item => {
-  item.addEventListener('mouseenter', () => {
-    document.body.classList.add('hovered');
-  });
-  item.addEventListener('mouseleave', () => {
-    document.body.classList.remove('hovered');
-  });
-});
-
-// ===== Footer: live Jakarta time + Garchomp =====
-// Garchomp flying animation - shark dragon swooping
-const garchompFrames = [
-  '∧(>w<)∧',
-  '/(>w<)/',
-  '∨(>w<)∨',
-  '\\(>w<)\\',
-];
-
+const garchompFrames = ['∧(>w<)∧', '/(>w<)/', '∨(>w<)∨', '\\(>w<)\\'];
+const footerEl = document.getElementById('footer-time');
 let frame = 0;
 
 function updateFooter() {
-  const now = new Date();
-  const timeStr = now.toLocaleTimeString('en-US', {
+  const timeStr = new Date().toLocaleTimeString('en-US', {
     timeZone: 'Asia/Jakarta',
     hour: 'numeric',
     minute: '2-digit',
     hour12: true
   }).toLowerCase();
 
-  const chomp = garchompFrames[frame % garchompFrames.length];
-  frame++;
-
-  const el = document.getElementById('footer-time');
-  if (el) {
-    el.innerHTML = `${timeStr} in Jakarta <span class="footer-garchomp" title="Garchomp">${chomp}</span>`;
-  }
+  footerEl.innerHTML = `${timeStr} in Jakarta <span class="footer-garchomp" title="Garchomp">${garchompFrames[frame++ % garchompFrames.length]}</span>`;
 }
 
 updateFooter();

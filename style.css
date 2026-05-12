@@ -22,11 +22,6 @@ body {
   line-height: 1.7;
   background: #fff;
   -webkit-font-smoothing: antialiased;
-  transition: background 0.3s ease;
-}
-
-body.hovered {
-  background: #f5f0e8;
 }
 
 .container {
@@ -83,19 +78,24 @@ a:hover {
   margin-bottom: 0;
 }
 
-/* ===== Writing ===== */
-.writing {
+/* ===== Shared section styles ===== */
+.writing,
+.experience,
+.projects {
   padding: 32px 0;
   border-top: 1px solid var(--color-border);
 }
 
-.writing h2 {
+.writing h2,
+.experience h2,
+.projects h2 {
   font-size: 0.85rem;
   font-weight: 500;
   color: var(--color-text-secondary);
   margin-bottom: 20px;
 }
 
+/* ===== Writing ===== */
 .writing-list {
   list-style: none;
 }
@@ -118,53 +118,7 @@ a:hover {
   font-weight: 500;
 }
 
-/* ===== Projects ===== */
-.projects {
-  padding: 32px 0;
-  border-top: 1px solid var(--color-border);
-}
-
-.projects h2 {
-  font-size: 0.85rem;
-  font-weight: 500;
-  color: var(--color-text-secondary);
-  margin-bottom: 20px;
-}
-
-.proj-list {
-  list-style: none;
-}
-
-.proj-list li {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-  padding: 8px 0;
-}
-
-.proj-list a {
-  font-size: 0.95rem;
-  font-weight: 500;
-}
-
-.proj-desc {
-  font-size: 0.85rem;
-  color: var(--color-text-secondary);
-}
-
 /* ===== Experience ===== */
-.experience {
-  padding: 32px 0;
-  border-top: 1px solid var(--color-border);
-}
-
-.experience h2 {
-  font-size: 0.85rem;
-  font-weight: 500;
-  color: var(--color-text-secondary);
-  margin-bottom: 20px;
-}
-
 .exp-list {
   list-style: none;
 }
@@ -192,22 +146,44 @@ a:hover {
   font-weight: 600;
 }
 
-/* ===== Hover fade effect ===== */
+/* ===== Projects ===== */
+.proj-list {
+  list-style: none;
+}
+
+.proj-list li {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 8px 0;
+}
+
+.proj-list a {
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.proj-desc {
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+}
+
+/* ===== Hover fade ===== */
 .writing-list li,
 .exp-list li,
 .proj-list li {
-  transition: opacity 0.2s ease;
+  transition: opacity 0.15s ease;
 }
 
-body.hovered .writing-list li,
-body.hovered .exp-list li,
-body.hovered .proj-list li {
-  opacity: 0.3;
+.writing-list:hover li,
+.exp-list:hover li,
+.proj-list:hover li {
+  opacity: 0.45;
 }
 
-body.hovered .writing-list li:hover,
-body.hovered .exp-list li:hover,
-body.hovered .proj-list li:hover {
+.writing-list li:hover,
+.exp-list li:hover,
+.proj-list li:hover {
   opacity: 1;
 }
 
