@@ -9,7 +9,7 @@
   --color-text-secondary: oklch(46% 0.008 60);
   --color-link: oklch(15% 0.005 60);
   --color-border: oklch(90% 0.007 60);
-  --font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font: 'DM Sans', system-ui, sans-serif;
 }
 
 html {
@@ -171,14 +171,15 @@ a:hover {
 
 .proj-list li {
   display: flex;
-  flex-direction: column;
-  gap: 1px;
+  align-items: baseline;
+  gap: 16px;
   padding: 5px 0;
 }
 
 .proj-list a {
   font-size: 0.875rem;
   font-weight: 400;
+  white-space: nowrap;
 }
 
 .proj-desc {
@@ -243,5 +244,14 @@ a:hover {
 
   .exp-date {
     min-width: unset;
+  }
+
+  .proj-list li {
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .proj-list a {
+    white-space: normal;
   }
 }
