@@ -171,15 +171,14 @@ a:hover {
 
 .proj-list li {
   display: flex;
-  align-items: baseline;
-  gap: 16px;
+  flex-direction: column;
+  gap: 1px;
   padding: 5px 0;
 }
 
 .proj-list a {
   font-size: 0.875rem;
   font-weight: 400;
-  white-space: nowrap;
 }
 
 .proj-desc {
@@ -246,12 +245,4 @@ a:hover {
     min-width: unset;
   }
 
-  .proj-list li {
-    flex-direction: column;
-    gap: 2px;
-  }
-
-  .proj-list a {
-    white-space: normal;
-  }
 }
