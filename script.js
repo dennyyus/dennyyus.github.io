@@ -1,3 +1,11 @@
+// Reveal page once fonts are loaded — hides FOUT and gives the fade-in
+const reveal = () => document.body.classList.add('loaded');
+if (document.fonts) {
+  document.fonts.ready.then(reveal);
+} else {
+  reveal();
+}
+
 const garchompFrames = ['∧(>w<)∧', '/(>w<)/', '∨(>w<)∨', '\\(>w<)\\'];
 const footerEl = document.getElementById('footer-time');
 let frame = 0;
