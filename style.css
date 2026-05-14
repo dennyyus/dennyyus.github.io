@@ -29,12 +29,12 @@ body {
   opacity: 0;
 }
 
-body.loaded .header    { animation: fadeUp 0.5s ease-out 0.00s both; }
-body.loaded .bio       { animation: fadeUp 0.5s ease-out 0.10s both; }
-body.loaded .writing   { animation: fadeUp 0.5s ease-out 0.20s both; }
-body.loaded .experience{ animation: fadeUp 0.5s ease-out 0.30s both; }
-body.loaded .projects  { animation: fadeUp 0.5s ease-out 0.40s both; }
-body.loaded .footer    { animation: fadeUp 0.5s ease-out 0.50s both; }
+body.loaded .header    { animation: fadeUp 0.7s ease-out 0.00s both; }
+body.loaded .bio       { animation: fadeUp 0.7s ease-out 0.15s both; }
+body.loaded .writing   { animation: fadeUp 0.7s ease-out 0.30s both; }
+body.loaded .experience{ animation: fadeUp 0.7s ease-out 0.45s both; }
+body.loaded .projects  { animation: fadeUp 0.7s ease-out 0.60s both; }
+body.loaded .footer    { animation: fadeUp 0.7s ease-out 0.75s both; }
 
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(6px); }
