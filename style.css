@@ -22,18 +22,29 @@ body {
   line-height: 1.7;
   background: oklch(99% 0.006 60);
   -webkit-font-smoothing: antialiased;
-  opacity: 0;
-  transition: opacity 0.35s ease-out;
 }
 
-body.loaded {
-  opacity: 1;
+/* ===== Staggered fade-in ===== */
+.header, .bio, .writing, .experience, .projects, .footer {
+  opacity: 0;
+}
+
+body.loaded .header    { animation: fadeUp 0.5s ease-out 0.00s both; }
+body.loaded .bio       { animation: fadeUp 0.5s ease-out 0.10s both; }
+body.loaded .writing   { animation: fadeUp 0.5s ease-out 0.20s both; }
+body.loaded .experience{ animation: fadeUp 0.5s ease-out 0.30s both; }
+body.loaded .projects  { animation: fadeUp 0.5s ease-out 0.40s both; }
+body.loaded .footer    { animation: fadeUp 0.5s ease-out 0.50s both; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0);   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  body {
+  .header, .bio, .writing, .experience, .projects, .footer {
     opacity: 1 !important;
-    transition: none !important;
+    animation: none !important;
   }
 }
 
