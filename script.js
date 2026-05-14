@@ -6,7 +6,7 @@ if (document.fonts) {
   reveal();
 }
 
-const garchompFrames = ['∧(>w<)∧', '/(>w<)/', '∨(>w<)∨', '\\(>w<)\\'];
+const garchompFrames = ['△(>ᗜ<)△', '▲(>ᗜ<)▲', '△(>∀<)△', '▲(>∀<)▲'];
 const footerEl = document.getElementById('footer-time');
 let frame = 0;
 
@@ -18,7 +18,7 @@ function updateFooter() {
     hour12: true
   }).toLowerCase();
 
-  footerEl.innerHTML = `${timeStr} in Jakarta <span class="footer-garchomp" title="Garchomp">${garchompFrames[frame++ % garchompFrames.length]}</span>`;
+  footerEl.innerHTML = `${timeStr} in Jakarta, here's Garchomp <span class="footer-garchomp">${garchompFrames[frame++ % garchompFrames.length]}</span>`;
 }
 
 updateFooter();
